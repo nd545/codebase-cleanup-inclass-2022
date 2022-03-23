@@ -6,6 +6,18 @@
 #products = products_df.to_dict("records")
 
 import os
+import pandas as pd
+
+def to_usd(my_price):
+    """
+    This is a docstring. It tells us what this function is about.
+    What its responsibilities are
+    What the parameters are 
+    What this function will return
+    Example of invoking the function
+    """
+    return '${:,.2f}'.format(p["price"])
+
 
 # checks to see if a products.csv file exists. If not, it uses the default
 if os.path.isfile(os.path.join(os.path.dirname(__file__), "..", "data", "products.csv")) == True:
@@ -33,7 +45,7 @@ print("THERE ARE", len(products), "PRODUCTS:")
 print("---------")
 
 for p in products:
-    print("..." + p["name"] + "   " + '${:,.2f}'.format(p["price"]))
+    print("..." + p["name"] + "   " + to_usd(p["price"]))
 
 
 all_prices = []
@@ -44,7 +56,8 @@ import statistics
 avg_price = statistics.median(all_prices)
 
 print("---------")
-print("AVERAGE PRICE:", '${:,.2f}'.format(avg_price))
+print("AVERAGE PRICE:", to_usd(avg_price))
+
 
 
 
