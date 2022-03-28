@@ -47,5 +47,19 @@ python app/game.py
 ```
 
 
+
+
 # Run the inventory report:
 # ```sh
+
+
+```sh
+conda create -n cleanup-env python=3.8
+```
+```sh
+conda activate cleanup-env
+```
+Install packages:
+```sh
+pip install -r requirements.txt
+```
