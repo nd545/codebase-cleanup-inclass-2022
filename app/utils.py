@@ -7,3 +7,7 @@ def to_usd(my_price):
     Example of invoking the function
     """
     return '${:,.2f}'.format(my_price)
+
+price = input("Please choose a price like 4.9999")
+
+print(to_usd(float(price)))
