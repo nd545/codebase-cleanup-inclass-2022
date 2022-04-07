@@ -45,21 +45,21 @@ Run the game:
 ```sh
 python app/game.py
 ```
-
-
-
-
-# Run the inventory report:
-# ```sh
-
+ Run the inventory report:
 
 ```sh
-conda create -n cleanup-env python=3.8
+python -m app.groceries
 ```
+
 ```sh
-conda activate cleanup-env
+python -m app.stocks
 ```
-Install packages:
+
 ```sh
-pip install -r requirements.txt
+python -m app.crypto
 ```
+
+```sh
+python -m app.unemployment
+```
+

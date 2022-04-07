@@ -4,11 +4,19 @@
 
 
 
+
 from random import choice
 
 
 
 def determine_winner(user_choice, computer_choice):
+    """
+    the options for this function are user_choice and computer_choice 
+    the parameters are a string that are rock, paper or scissors
+    the function based on set rules will determine whether the computer choice wins against the user choice and it will return whoever won this match of rock paper scissors
+    """
+
+    
     #return "paper"
     winners = {
         "rock": {
