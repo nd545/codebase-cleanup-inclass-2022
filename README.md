@@ -63,4 +63,3 @@ python -m app.crypto
 python -m app.unemployment
 ```
 
-
