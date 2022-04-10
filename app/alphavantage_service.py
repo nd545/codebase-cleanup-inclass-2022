@@ -1,7 +1,7 @@
 # docs: https://www.alphavantage.co/documentation/#unemployment
-url = f"https://www.alphavantage.co/query?function=UNEMPLOYMENT&apikey={ALPHAVANTAGE_API_KEY}"
-response = requests.get(url)
-parsed_response = json.loads(response.text)
+#url = f"https://www.alphavantage.co/query?function=UNEMPLOYMENT&apikey={ALPHAVANTAGE_API_KEY}"
+#response = requests.get(url)
+#parsed_response = json.loads(response.text)
 #print(parsed_response)
 
 # maybe something like the following rough organizational structure would be reasonable.
@@ -13,6 +13,7 @@ import os
 from dotenv import load_dotenv
 import requests
 import json
+
 
 load_dotenv()
 
