@@ -17,18 +17,20 @@ def fetch_crypto_data(symbol):
     url = f"https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_DAILY&market=USD&symbol={symbol}&apikey={ALPHAVANTAGE_API_KEY}"
     response = requests.get(url)
     parsed_response = json.loads(response.text)
-    return(parsed_response)
+    return parsed_response
     
 
 
 def fetch_stocks_data(symbol):
     url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={symbol}&apikey={ALPHAVANTAGE_API_KEY}&datatype=csv"
-    return "TODO"
+    response = requests.get(url)
+    parsed_response = json.loads(response.text)
+    return parsed_response
 
 
-def fetch_unemployment_data():
+def fetch_unemployment_data(symbol):
     url = f"https://www.alphavantage.co/query?function=UNEMPLOYMENT&apikey={ALPHAVANTAGE_API_KEY}"
     response = requests.get(url)
     parsed_response = json.loads(response.text)
     print(parsed_response)
-    return "TODO"
+    return parsed_response
